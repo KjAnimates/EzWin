@@ -40,6 +40,20 @@ class Window:
     ''' Displays the window. '''
     def display(self):
         if self.window != None:
+            self.window.title(self.title)
             self.window.mainloop()
         else:
             print("WARNING: Window did not open since it does not exist.")
+    
+    ''' Sets the title of the window.
+    @param new_title: The new title of the window
+
+    Errors:
+        `ValueError` -> Caused by `new_title` not existing or not being of type `str`.
+    '''
+    def set_title(self, new_title: str = "Untitled Window"):
+        if new_title != None:
+            if type(new_title) is str:
+                self.title = new_title
+            else:
+                raise ValueError("Parameter #1 (`new_title: str`) must exist and be of type 'str'.")
