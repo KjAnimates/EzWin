@@ -9,7 +9,7 @@ class Window:
     width: int  = 0
     height: int = 0
 
-    def __init__(self, width: int, height: int):
+    def __init__(self, width: int = 0, height: int = 0):
         # Check If <dimension> isn't `None`, and it is an integer
         if width != None and type(width) is int:
             self.width = width
