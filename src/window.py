@@ -57,3 +57,12 @@ class Window:
                 self.title = new_title
             else:
                 raise ValueError("Parameter #1 (`new_title: str`) must exist and be of type 'str'.")
+    
+    ''' Sets the geometry of the window.
+    @param new_geometry: The new geometry of the window (`width`x`height`)
+    '''
+    def set_geometry(self, new_geometry: str):
+        if new_geometry != None:
+            if type(new_geometry) is str:
+                self.window.geometry(new_geometry)
+
