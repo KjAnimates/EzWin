@@ -10,14 +10,14 @@ class Window:
     height: int = 0
 
     def __init__(self, width: int = 0, height: int = 0):
+        self.window = tk.Tk()
+        self.window.title(self.title)
+
         # Check If <dimension> isn't `None`, and it is an integer
         if width != None and type(width) is int:
             self.width = width
         if height != None and type(height) is int:
             self.height = height
-        
-        window = tk.Tk()
-        window.title(self.title)
     
     ''' Sets the size of the window
     @param width: The new width of the window   ! CANNOT BE `None`!
@@ -36,3 +36,10 @@ class Window:
             self.height = height
         else:
             raise ValueError("Height must be an integer and must not be `None`.")
+    
+    ''' Displays the window. '''
+    def display(self):
+        if self.window != None:
+            self.window.mainloop()
+        else:
+            print("WARNING: Window did not open since it does not exist.")
