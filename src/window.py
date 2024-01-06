@@ -15,3 +15,14 @@ class Window:
             self.width = width
         if height != None and type(height) is int:
             self.height = height
+    
+    def set_size(self, width: int, height: int):
+        if width != None and type(width) is int:
+            self.width = width
+        else:
+            raise ValueError("Width must be an integer and must not be `None`.")
+        
+        if height != None and type(height) is int:
+            self.height = height
+        else:
+            raise ValueError("Height must be an integer and must not be `None`.")
