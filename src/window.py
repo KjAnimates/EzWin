@@ -5,8 +5,9 @@ class Window:
     title: str = ""
     window: tk.Tk | None = None
 
-    width = 0
-    height = 0
+    # The dimensions of the window
+    width: int  = 0
+    height: int = 0
 
     def __init__(self, width: int, height: int):
         # Check If <dimension> isn't `None`, and it is an integer
