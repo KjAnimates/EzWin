@@ -33,3 +33,9 @@ Params:
 
 Errors:
     `ValueError` -> Caused by `new_title` not existing or not being of type `str`.
+
+### `set_geometry(new_geometry: str)`:
+Sets the geometry of the window.
+
+Params:
+ * `new_geometry` - The new geometry of the window (`width`x`height`)
