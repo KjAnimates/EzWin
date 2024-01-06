@@ -5,6 +5,8 @@ class Window:
     title: str = ""
     window: tk.Tk | None = None
 
-    def __init__(self, title: str):
-        if title != None and title is str:
-            self.title = title
+    width = 0
+    height = 0
+
+    def __init__(self):
+        pass      
