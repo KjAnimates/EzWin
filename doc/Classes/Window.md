@@ -10,7 +10,7 @@ Properties:
 Methods:
 ---
 
-### `set_size`:
+### `set_size(width: int, height: int)`:
 Sets the size of the window.
 
 Params:
