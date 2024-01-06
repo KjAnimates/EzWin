@@ -16,6 +16,13 @@ class Window:
         if height != None and type(height) is int:
             self.height = height
     
+    ''' Sets the size of the window
+    @param width: The new width of the window
+    @param height: The new height of the window
+
+    Errors:
+    `ValueError` -> Happens when either `width` or `height` is `None` or not an integer.
+    '''
     def set_size(self, width: int, height: int):
         if width != None and type(width) is int:
             self.width = width
