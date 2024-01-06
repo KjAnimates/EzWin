@@ -2,7 +2,7 @@ import tkinter as tk
 
 class Window:
     ''' title of the window. '''
-    title: str = ""
+    title: str = "Untitled Window"
     window: tk.Tk | None = None
 
     # The dimensions of the window
@@ -15,6 +15,9 @@ class Window:
             self.width = width
         if height != None and type(height) is int:
             self.height = height
+        
+        window = tk.Tk()
+        window.title(self.title)
     
     ''' Sets the size of the window
     @param width: The new width of the window   ! CANNOT BE `None`!
